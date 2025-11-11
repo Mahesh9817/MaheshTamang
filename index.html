@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSec Pro | Ethical Hacker Portfolio</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background-color: #0d0d0d;
+    color: #00ff88;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header {
+    text-align: center;
+    padding: 50px 20px 20px;
+  }
+
+  img.profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00ff88;
+    box-shadow: 0 0 20px #00ff88;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    color: #00ffcc;
+  }
+
+  p.tagline {
+    color: #b3b3b3;
+    font-size: 1.1em;
+  }
+
+  section {
+    max-width: 800px;
+    width: 90%;
+    background: rgba(0, 255, 136, 0.05);
+    border: 1px solid rgba(0,255,136,0.2);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0,255,136,0.1);
+  }
+
+  h2 {
+    border-left: 4px solid #00ff88;
+    padding-left: 10px;
+    color: #00ffaa;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    margin: 8px 0;
+  }
+
+  a {
+    color: #00ffaa;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9em;
+  }
+
+  button {
+    background: none;
+    border: 1px solid #00ffaa;
+    color: #00ffaa;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #00ffaa;
+    color: #0d0d0d;
+  }
+
+  .terminal {
+    font-family: 'Courier New', monospace;
+    background-color: #111;
+    color: #00ff88;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    white-space: pre-line;
+    min-height: 100px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="image.jpg" alt="Profile Picture" class="profile">
+  <h1>Mahesh Tamang</h1>
+  <p class="tagline">Certified Ethical Hacker | Penetration Tester | Cyber Defense Specialist</p>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I'm a cybersecurity professional passionate about securing systems and discovering vulnerabilities before hackers do.
+    With years of experience in ethical hacking, penetration testing, and network defense, I help organizations stay a step ahead of cyber threats.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <ul>
+    <li>✔ Penetration Testing & Vulnerability Assessment</li>
+    <li>✔ Web Application & Network Security</li>
+    <li>✔ Reverse Engineering & Malware Analysis</li>
+    <li>✔ Linux / Kali Linux | Metasploit | Burp Suite</li>
+    <li>✔ Python, Bash, and PowerShell Scripting</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <ul>
+    <li>🧠 <strong>VulnScanner</strong> — Automated network vulnerability scanner.</li>
+    <li>💻 <strong>WebGuard</strong> — Web app firewall testing framework.</li>
+    <li>🔐 <strong>PhishEye</strong> — Tool to simulate phishing campaigns safely for awareness training.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:alexcipher@example.com">mahesh@tamang.com</a></p>
+  <p>LinkedIn: <a href="#">linkedin.com/in/maheshtamang</a></p>
+  <p>GitHub: <a href="#">github.com/maheshtamang</a></p>
+</section>
+
+<section>
+  <h2>Live Terminal</h2>
+  <div class="terminal" id="terminal"></div>
+  <button id="runTerminal">Run Diagnostic</button>
+</section>
+
+<footer>
+  © <span id="year"></span> Mahesh Tamang — Ethical Hacker Portfolio
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Typing terminal simulation
+  const terminal = document.getElementById('terminal');
+  const runBtn = document.getElementById('runTerminal');
+  const lines = [
+    'Initializing security protocols...',
+    'Scanning network for vulnerabilities...',
+    'Testing firewall resilience...',
+    'Performing SQL injection checks...',
+    'No threats found ✅',
+    'System secure. All clear.'
+  ];
+
+  runBtn.addEventListener('click', () => {
+    terminal.textContent = '';
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index < lines.length) {
+        terminal.textContent += '> ' + lines[index] + '\n';
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>
